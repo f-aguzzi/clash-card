@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './flipcard.css'
 
 import 'katex/dist/katex.min.css';
@@ -13,12 +13,16 @@ interface CardProps {
 function Card({ question, answer, formula }: CardProps) {
 
     const mathFormula = () => {
-        if(formula !== null)
+        if(formula !== undefined)
             return (<TeX math={formula} />)
     }
 
+    useEffect(() => {
+        
+    }, []);
+
     return(
-        <section className="h-screen w-screen bg-gray-600 flex justify-center items-center gap-x-16 text-gray-700">
+        <section className="h-full my-2 w-screen bg-transparent flex justify-center items-center gap-x-16 text-gray-700">
             <div id="flip-card" >
                 <div id="flip-card-inner">
                     <div id="flip-card-front" className="bg-gray-100 rounded-3xl flex justify-center items-center">
