@@ -6,6 +6,13 @@ rules.push({
   use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'postcss-loader' }],
 });
 
+rules.push(
+  {
+    test: /\.(png|jpg|jpeg|gif)$/i,
+    type: "asset/resource",
+  },
+)
+
 module.exports = {
   module: {
     rules,
