@@ -1,6 +1,5 @@
 import { BrowserWindow } from "electron/main";
 import * as remote from '@electron/remote';
-import fs from "fs";
 import React from "react";
 
 function MainMenu() {
