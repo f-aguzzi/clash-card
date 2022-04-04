@@ -1,11 +1,16 @@
 import { BrowserWindow } from "electron/main";
 import * as remote from '@electron/remote';
 import React from "react";
+import { Pages } from "./types";
 
-function MainMenu() {
+interface MainMenuProps {
+    setCurrentPage: React.Dispatch<React.SetStateAction<Pages>>;
+}
+
+function MainMenu({ setCurrentPage }: MainMenuProps) {
 
 	const loadQuiz = () => {
-		//const dialog = remote.dialog;
+		setCurrentPage(Pages.Quiz);
 	}
 
     return (
