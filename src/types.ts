@@ -1,4 +1,4 @@
-
+import { API } from "../preload";
 
 export enum Pages {
     MainMenu,
@@ -13,6 +13,6 @@ declare global {
    * Also note the capital "Window" here
    */
   interface Window {
-    test: string;
+    api: typeof API
   }
 }

@@ -1,5 +1,7 @@
-const { contextBridge, ipcRenderer } = require('electron');
+import { contextBridge, ipcRenderer } from "electron"
 
-const testString = "This is a test";
+export const API = {
+  test: string
+}
 
-contextBridge.exposeInMainWorld('test', testString);
+contextBridge.exposeInMainWorld("api", API);
