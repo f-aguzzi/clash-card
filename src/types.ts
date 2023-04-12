@@ -1,4 +1,4 @@
-import { API } from "../preload";
+import { API } from "./preload";
 
 export enum Pages {
     MainMenu,

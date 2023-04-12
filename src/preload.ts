@@ -1,7 +1,7 @@
 import { contextBridge, ipcRenderer } from "electron"
 
 export const API = {
-  test: string
+  test: "TEST",
 }
 
 contextBridge.exposeInMainWorld("api", API);
